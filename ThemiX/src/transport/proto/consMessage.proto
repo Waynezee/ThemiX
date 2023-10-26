@@ -1,0 +1,55 @@
+syntax = "proto3";
+package consmsg;
+
+option go_package = "./consmsgpb";
+
+message Content {
+    bytes Content = 1;
+}
+
+message Collections {
+    repeated bytes Collections = 1;
+}
+
+message WholeMessage {
+    ConsMessage ConsMsg = 1;
+    uint32 From = 2;
+    bytes Signature = 3;
+    bytes Collection = 4;
+}
+
+enum MessageType {
+    VAL                  = 0;
+    ECHO                 = 1;
+    READY                = 2;
+    BVAL                 = 3;
+    AUX                  = 4;
+    COIN                 = 5;
+    CON                  = 6;
+    SKIP                 = 7;
+    ECHO_COLLECTION      = 8;
+    READY_COLLECTION     = 9;
+    BVAL_ZERO_COLLECTION = 10;
+    BVAL_ONE_COLLECTION  = 11;
+    AUX_ZERO_COLLECTION  = 12;
+    AUX_ONE_COLLECTION   = 13;
+    ACTIVE_VAL           = 14;
+    ACTIVE_REQ           = 15;
+}
+
+message ConsMessage {
+    MessageType type = 1;
+    uint32 proposer = 2;
+    uint32 round = 3;
+    uint64 sequence = 4;
+    bytes content = 5;
+    bool single = 6;
+    bytes binVals = 7;
+}
+
+message Request {
+    uint32 From = 1;
+    uint64 Sequence = 2;
+    bytes Signature = 3;
+    bytes Content = 4;
+}
