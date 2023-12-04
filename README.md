@@ -6,4 +6,14 @@
 * AwsCli/: scripts for using AWS in command line
 * HotStuff:implementation of [3-chain HotStuff](https://github.com/asonnino/hotstuff/tree/3-chain)
 
-
+## Citation
+If you find this repository useful in your research, please cite
+```
+@inproceedings{chen2023bridging,
+  title={Bridging the Gap of Timing Assumptions in Byzantine Consensus},
+  author={Chen, Zixuan and Fan, Lei and Liu, Shengyun and Vukoli{\'c}, Marko and Wang, Xiangzhe and Zhang, Jingjing},
+  booktitle={Proceedings of the 24th International Middleware Conference on ZZZ},
+  pages={178--191},
+  year={2023}
+}
+```
