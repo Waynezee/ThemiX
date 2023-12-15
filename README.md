@@ -1,4 +1,5 @@
 # Artifacts For ThemiX
+[![DOI](https://zenodo.org/badge/710265805.svg)](https://zenodo.org/doi/10.5281/zenodo.10391029)
 * BKR/:implementation of [BKR protocol](./BKR/README.md)
 * PBFT/:implementation of [PBFT protocol](./PBFT/README.md) without view-change
 * SyncHS/:implementation of [SyncHS protocol](./SyncHS/README.md) in responsive view without view change
